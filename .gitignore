@@ -1,0 +1,3 @@
+content/**.partial.html
+content/**.partial.json
+!content/sample.partial.**

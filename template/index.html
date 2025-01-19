@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Information.Title}} &ndash; 文豪（α版）</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=info" />
+    <script src="/static/main.js" defer></script>
+</head>
+<body>
+    <h1 class="no-disp">文豪</h1>
+    <div class="head">
+        <p class="fade-text">
+            {{.Information.Quote}}
+        </p>
+    </div>
+    <div class="main" id="main">
+        {{ .Content }}
+        <button class="call-author" popovertarget="author" popovertargetaction="show"><span class="material-symbols-outlined">info</span></button>
+    </div>
+    <div id="author" class="modal" popover>
+        <div class="modal-content">
+            <h2>{{.Information.Title}}</h2>
+            <dl>
+                <dt>作者</dt>
+                <dd>{{.Information.Author}}</dd>
+                <dt>コピーライト</dt>
+                <dd>{{.Information.Copyright}}</dd>
+                <dt>ライセンス</dt>
+                <dd>{{.Information.License}}</dd>
+                <dt>登録日</dt>
+                <dd>{{.Information.CreationDate}}
+                </dd>
+                <dt>共有リンク</dt>
+                <dd>共有リンクは無効化されています。</dd>
+                <dt>文豪について</dt>
+                <dd>このソフトウェアはα版です</dd>
+                <dd>Source Code: ©️ 2025 Sasakulab; MIT LICENSE; <a href="https://github.com/m-tsuru/bungo">GitHub</a>;</dd>
+                <dd>Text Source: ©️ 2025 Sasakulab; All Rights Reserved.</dd>
+                <dt>推奨環境</dt>
+                <dd>PC版 Google Chrome, Firefox &ndash; その他のブラウザでも内容を覗くことは可能です．</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

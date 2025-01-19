@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif JP", serif;
+}
+
+*:popover-open {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    min-width: 300px;
+}
+
+*::backdrop {
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+body {
+    background-image: radial-gradient(rgba(233, 233, 233, 1), rgba(215, 215, 215, 1));
+}
+
+.no-disp {
+    display: none;
+}
+
+.head {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head > p {
+    font-size: xx-large;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main > p {
+    line-height: 2;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    font-size: medium;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: justify;
+}
+
+.main > p:first {
+    padding-left: 5%;
+}
+
+.main > p:last {
+    padding-right: 5%;
+}
+
+.fade-text {
+    animation: fade-in 3s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    background-color: #efefef;
+    border-radius: 50%;
+    box-shadow: -4px -4px 8px #fff, 4px 4px 8px rgb(0 0 0 / 24%);
+}
+
+.call-author {
+    position: absolute;
+    background-color: #ccc;
+    border: none;
+    box-shadow: -4px -4px 8px #fff, 4px 4px 8px rgb(0 0 0 / 24%);
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    left:  50px;
+    top: 50px;
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content dd {
+   margin-left: 2em;
+}
+
+
+@keyframes fade-in {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
